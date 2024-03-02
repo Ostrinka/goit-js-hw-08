@@ -2,18 +2,14 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 1128px;
-  margin: 0 auto;
-}
-
 .gallery {
-  margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   list-style-type: none;
   padding: 0;
+  width: 1128px;
+  margin: 0 auto;
 }
 
 .gallery-item {
@@ -24,6 +20,11 @@ body {
   display: block;
   width: 360px;
   height: 200px;
+  transition: transform 0.25s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.04);
 }
 
 .modal {
