@@ -95,9 +95,17 @@ function handleModalOpen(event) {
   const instance = basicLightbox.create(`
 	<div class="modal">
     <img
-        src="${image.original}"/>
+        src="${image.original}" class="modal-image"/>
   </div>
 `);
 
   instance.show();
+
+const modalImage = document.querySelector(".modal-image");
+  modalImage.addEventListener("click", () => {
+    instance.close();
+  });
 }
+
+
+
